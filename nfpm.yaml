@@ -1,0 +1,28 @@
+name: "tippecanoe"
+arch: "amd64"
+platform: "linux"
+version: "1.35.0"
+section: "default"
+priority: "extra"
+maintainer: "Carlos Becker <pkg@carlosbecker.dev>"
+description: |
+  Build vector tilesets from large collections of GeoJSON features.
+    This is an unofficial package.
+vendor: "mapbox"
+homepage: "https://github.com/mapbox/tippecanoe"
+license: "BSD-2"
+bindir: "/usr/local/bin"
+files:
+  bin/tippecanoe: /usr/local/bin/tippecanoe
+  bin/tippecanoe-enumerate: /usr/local/bin/tippecanoe-enumerate
+  bin/tippecanoe-decode: /usr/local/bin/tippecanoe-decode
+  bin/tippecanoe-json-tool: /usr/local/bin/tippecanoe-json-tool
+  bin/tile-join: /usr/local/bin/tile-join
+  man/tippecanoe.1: /usr/local/share/man/man1/tippecanoe.1
+overrides:
+  deb:
+    depends:
+      - libsqlite3-0
+  rpm:
+    depends:
+      - sqlite
